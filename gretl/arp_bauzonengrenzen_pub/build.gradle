@@ -1,0 +1,14 @@
+import ch.so.agi.gretl.tasks.*
+import java.nio.file.Paths
+
+apply plugin: "ch.so.agi.gretl"
+
+defaultTasks 'importData'
+
+tasks.register('importData', Ili2pgImport) {
+    database = [dbUriPub, dbUserPub, dbPwdPub]
+    dbschema = "arp_bauzonengrenzen_pub_v1"
+    models = "SO_ARP_Bauzonengrenzen_20210120"
+    dataFile = "ilidata:ch.so.arp.bauzonengrenzen"
+    disableValidation = true
+}
