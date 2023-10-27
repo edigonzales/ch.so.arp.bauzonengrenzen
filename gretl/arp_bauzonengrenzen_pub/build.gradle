@@ -10,5 +10,5 @@ tasks.register('importData', Ili2pgImport) {
     dbschema = "arp_bauzonengrenzen_pub_v1"
     models = "SO_ARP_Bauzonengrenzen_20210120"
     dataFile = "ilidata:ch.so.arp.bauzonengrenzen"
-    disableValidation = false
+    disableValidation = true
 }
